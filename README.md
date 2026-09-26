@@ -14,7 +14,7 @@ A new terminal window should show **UCRT64** in its prompt. Do not mix UCRT64 pa
 
 ### VS Code quick start
 
-The VS Code terminal often opens as **PowerShell** (its prompt starts with `PS`). If you see `PS`, use these PowerShell commands to run the executable already built in this workspace:
+The VS Code terminal often opens as **PowerShell** (its prompt starts with `PS`). On the original development PC, use these PowerShell commands to run the executable already built in this workspace:
 
 ```powershell
 cd 'C:\Users\hp\Documents\New project\boids-flocking'
@@ -23,6 +23,8 @@ $env:Path = 'C:\msys64\ucrt64\bin;' + $env:Path
 ```
 
 Run each line separately. If PowerShell shows a `>>` continuation prompt, press **Ctrl+C** to return to a normal `PS ...>` prompt, then enter one command at a time. To build with CMake, open **MSYS2 UCRT64** and use the steps below. VS Code may underline `#include <GL/freeglut.h>` until the FreeGLUT package is installed; if it remains underlined afterward, open the `boids-flocking` folder as the VS Code workspace and select `C:\msys64\ucrt64\bin\g++.exe` as the C/C++ compiler.
+
+The `build/` folder is ignored by Git, so a new clone from GitHub will not contain `boids.exe`. Build it using the steps below.
 
 1. Install [MSYS2](https://www.msys2.org/) to its default `C:\msys64` folder, then open **MSYS2 UCRT64** from the Start menu.
 2. Update MSYS2:
