@@ -14,10 +14,10 @@ A new terminal window should show **UCRT64** in its prompt. Do not mix UCRT64 pa
 
 ### VS Code quick start
 
-The VS Code terminal often opens as **PowerShell** (its prompt starts with `PS`). On the original development PC, use these PowerShell commands to run the executable already built in this workspace:
+The VS Code terminal often opens as **PowerShell** (its prompt starts with `PS`). If you have already built the project, use these PowerShell commands to run it. Replace the example path with your project's location:
 
 ```powershell
-cd 'C:\Users\hp\Documents\New project\boids-flocking'
+cd 'C:\Users\You\Documents\boids-flocking'
 $env:Path = 'C:\msys64\ucrt64\bin;' + $env:Path
 .\build\boids.exe
 ```
@@ -40,10 +40,10 @@ The `build/` folder is ignored by Git, so a new clone from GitHub will not conta
    pacman -S --needed mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja mingw-w64-ucrt-x86_64-freeglut
    ```
 
-4. Change to the folder containing this README. For this workspace:
+4. Change to the folder containing this README. For example:
 
    ```sh
-   cd "/c/Users/hp/Documents/New project/boids-flocking"
+   cd "/c/Users/You/Documents/boids-flocking"
    ```
 
    On another PC, replace that path with your project's location. Keep the quotes if any directory name contains spaces.
